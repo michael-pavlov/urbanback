@@ -24,7 +24,7 @@ OUR_DMZ = Address.parse('5.227.94.15')
 
 
 # Dataset properties.
-NFILES, FILENAME_PATTERN = 10, 'C:\\Dropbox\\projects\\urban_hack_moscow\\demo\\data_{index}.csv'
+NFILES, FILENAME_PATTERN = 10, 'data_{index}.csv'
 
 
 def is_our_address(addr):
