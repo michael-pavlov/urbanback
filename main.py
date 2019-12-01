@@ -104,7 +104,7 @@ def get_cluster(key):
 
 
 def main():
-    bottle.run(host='0.0.0.0', port=9090)
+    bottle.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
 
 if __name__ == '__main__':
     main()
