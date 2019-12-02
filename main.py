@@ -7,7 +7,7 @@ import bottle
 from sklearn.cluster import OPTICS
 from addr import Address, Subnet
 from clusterize import clusterize
-
+from bottle import response
 
 ALGO = OPTICS(min_samples=4)
 
@@ -105,6 +105,7 @@ def get_cluster(key):
 
 
 def main():
+    response.headers['Access-Control-Allow-Origin'] = '*'
     bottle.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
 
 if __name__ == '__main__':
